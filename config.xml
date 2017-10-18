@@ -18,7 +18,7 @@
 	<preference name="xwalkMultipleApk" value="true" />
 	<preference name="android-build-tool" value="ant" />
 
-	<preference name="phonegap-version" value="7.0.0" />
+	<preference name="phonegap-version" value="6.0.0" />
 	<preference name="permissions" value="none"/>
 
 	<preference name="disallowOverscroll" value="true" />
