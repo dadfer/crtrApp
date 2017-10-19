@@ -6,14 +6,10 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>test app2</name>
-    <description>
-        Hello World sample application that responds to the deviceready event.
-    </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
-    </author>
-    <content src="../index.html" />
+    <name>Criterio App</name>
+    <description>Periódico Digital con línea abierta, no partidario, ni tendencioso por razones de clase social, religiosas, raza, culturas u otros aspectos sociológicos.</description>
+    <author email="yo@davidvalladares.com" href="http://www.davidvalladares.com">David Valladares</author>
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -22,5 +18,6 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="webviewbounce" value="false" />
     <preference name="android-minSdkVersion" value="14" />
 </widget>
