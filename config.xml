@@ -58,11 +58,11 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
 
-	<!-- SplashScreen configuration 
+	<!-- SplashScreen configuration -->
 	<preference name="SplashScreen" value="splash" />
 	<preference name="SplashScreenDelay" value="10000" />
-	<preference name="FadeSplashScreenDuration" value="300" />
-	<preference name="ShowSplashScreenSpinner" value="false" />-->
+	<preference name="FadeSplashScreenDuration" value="600" />
+	<preference name="ShowSplashScreenSpinner" value="true" />
 
 	<!-- Icons and Splashscreens declaration -->
 <platform name="android">
