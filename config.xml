@@ -75,7 +75,7 @@
 	<icon src="icons/icon-wp-appkit-xxhdpi.png"  density="xxhdpi" />
 	<icon src="icons/icon-wp-appkit-xxxhdpi.png"  density="xxxhdpi" />
 	
-	<splash src="splash-9.png" qualifier="nodpi" />
+	<splash src="splash.9.png" qualifier="nodpi" />
 	<splash src="splashscreens/splashscreen-wp-appkit-ldpi.9.png"  density="ldpi" />
 	<splash src="splashscreens/splashscreen-wp-appkit-mdpi.9.png"  density="mdpi" />
 	<splash src="splashscreens/splashscreen-wp-appkit-hdpi.9.png"  density="hdpi" />
