@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="cordova.js"></script>
+		
+		<link rel="stylesheet" href="core/css/debug.css">
+		<script type="text/javascript">
+			var require = {
+				urlArgs : "bust="+ new Date().getTime()
+			};
+
+			var wpak_open_url = '';
+			window.handleOpenURL = function( url ) {
+			    wpak_open_url = url;
+			};
+		</script>
+
+		<script data-main="core/launch.js" src="vendor/require.js"></script>
+	</head>
+	<body>
+		<div id="app-layout"></div>
+		<div id="my-banner-container" class="banner">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- App Criterio -->
+			<ins class="adsbygoogle"
+				 style="display:block"
+				 data-ad-client="ca-pub-3199342279509577"
+				 data-ad-slot="2130056396"
+				 data-ad-format="link"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div id="app-debug-panel"></div>
+		<div id="app-debug-button"></div>
+	</body>
+</html>
