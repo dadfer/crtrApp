@@ -4,12 +4,11 @@
     <description>Periódico Digital con línea abierta, no partidario, ni tendencioso por razones de clase social, religiosas, raza, culturas u otros aspectos sociológicos.</description>
     <author email="yo@davidvalladares.com" href="http://www.davidvalladares.com">David Valladares</author>
     <gap:platform name="android" />
-	<gap:plugin name="phonegap-admob" source="npm" />
-    <!--<preference name="buildArchitecture" value="x86" />
+    <!--<preference name="buildArchitecture" value="arm" />
     <preference name="xwalkMultipleApk" value="true" />
-    <preference name="android-build-tool" value="ant" />
+    <preference name="android-build-tool" value="gradle" />-->
     <preference name="phonegap-version" value="cli-6.5.0" />
-    <preference name="permissions" value="none" />-->
+    <preference name="permissions" value="none" />
     <preference name="disallowOverscroll" value="true" />
     <preference name="webviewbounce" value="false" />
     <plugin name="cordova-plugin-inappbrowser" source="npm" />
@@ -30,25 +29,19 @@
     <preference name="SplashScreenDelay" value="10000" />
     <preference name="FadeSplashScreenDuration" value="300" />
     <preference name="ShowSplashScreenSpinner" value="false" />
-    <engine name="android" spec="~6.3.0" />
-    <!--<plugin name="phonegap-admob" spec="~4.1.15" />-->
-	<gap:plugin name="phonegap-admob" source="npm" />
-	<!-- Icons and Splashscreens declaration -->
-	<platform name="android">
-		<icon src="icon.png" />
-		<icon src="icons/icon-wp-appkit-ldpi.png"  density="ldpi" />
-		<icon src="icons/icon-wp-appkit-mdpi.png"  density="mdpi" />
-		<icon src="icons/icon-wp-appkit-hdpi.png"  density="hdpi" />
-		<icon src="icons/icon-wp-appkit-xhdpi.png"  density="xhdpi" />
-		<icon src="icons/icon-wp-appkit-xxhdpi.png"  density="xxhdpi" />
-		<icon src="icons/icon-wp-appkit-xxxhdpi.png"  density="xxxhdpi" />
-		
-		<splash src="splash.9.png" />
-		<splash src="splashscreens/splashscreen-wp-appkit-ldpi.9.png"  density="ldpi" />
-		<splash src="splashscreens/splashscreen-wp-appkit-mdpi.9.png"  density="mdpi" />
-		<splash src="splashscreens/splashscreen-wp-appkit-hdpi.9.png"  density="hdpi" />
-		<splash src="splashscreens/splashscreen-wp-appkit-xhdpi.9.png"  density="xhdpi" />
-		<splash src="splashscreens/splashscreen-wp-appkit-xxhdpi.9.png"  density="xxhdpi" />
-		<splash src="splashscreens/splashscreen-wp-appkit-xxxhdpi.9.png"  density="xxxhdpi" />
-	</platform>
+    <icon gap:platform="android" src="icon.png" />
+    <icon gap:platform="android" gap:qualifier="ldpi" src="icons/icon-wp-appkit-ldpi.png" />
+    <icon gap:platform="android" gap:qualifier="mdpi" src="icons/icon-wp-appkit-mdpi.png" />
+    <icon gap:platform="android" gap:qualifier="hdpi" src="icons/icon-wp-appkit-hdpi.png" />
+    <icon gap:platform="android" gap:qualifier="xhdpi" src="icons/icon-wp-appkit-xhdpi.png" />
+    <icon gap:platform="android" gap:qualifier="xxhdpi" src="icons/icon-wp-appkit-xxhdpi.png" />
+    <icon gap:platform="android" gap:qualifier="xxxhdpi" src="icons/icon-wp-appkit-xxxhdpi.png" />
+    <gap:splash gap:platform="android" src="splash.9.png" />
+    <gap:splash gap:platform="android" gap:qualifier="ldpi" src="splashscreens/splashscreen-wp-appkit-ldpi.9.png" />
+    <gap:splash gap:platform="android" gap:qualifier="mdpi" src="splashscreens/splashscreen-wp-appkit-mdpi.9.png" />
+    <gap:splash gap:platform="android" gap:qualifier="hdpi" src="splashscreens/splashscreen-wp-appkit-hdpi.9.png" />
+    <gap:splash gap:platform="android" gap:qualifier="xhdpi" src="splashscreens/splashscreen-wp-appkit-xhdpi.9.png" />
+    <gap:splash gap:platform="android" gap:qualifier="xxhdpi" src="splashscreens/splashscreen-wp-appkit-xxhdpi.9.png" />
+    <gap:splash gap:platform="android" gap:qualifier="xxxhdpi" src="splashscreens/splashscreen-wp-appkit-xxxhdpi.9.png" />
+    <plugin name="phonegap-admob" spec="~4.1.15" />
 </widget>

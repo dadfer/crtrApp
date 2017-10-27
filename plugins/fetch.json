@@ -183,10 +183,26 @@
         "is_top_level": false,
         "variables": {}
     },
-    "cordova-admob-sdk": {
+    "phonegap-admob": {
         "source": {
             "type": "registry",
-            "id": "cordova-admob-sdk"
+            "id": "phonegap-admob"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-connectivity-monitor": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-connectivity-monitor"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-google-play-services": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-google-play-services"
         },
         "is_top_level": false,
         "variables": {}
@@ -197,7 +213,13 @@
             "id": "cordova-plugin-crosswalk-webview@2.3.0"
         },
         "is_top_level": true,
-        "variables": {}
+        "variables": {
+            "XWALK_VERSION": "23+",
+            "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+            "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+            "XWALK_MODE": "embedded",
+            "XWALK_MULTIPLEAPK": "true"
+        }
     },
     "cordova-build-architecture": {
         "source": {

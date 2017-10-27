@@ -1,0 +1,91 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "phonegap-admob": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-build-architecture": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-google-play-services": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        }
+    }
+}

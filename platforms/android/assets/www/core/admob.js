@@ -206,17 +206,17 @@ var AdMobPlugin = {
         }
     },
     showProgress: function (show) {
-        if (show) {
+        /*if (show) {
             addClass(AdMobPlugin.spinner, "animated");
             removeClass(AdMobPlugin.progressDialog, "hidden");
         } else {
             addClass(AdMobPlugin.progressDialog, "hidden");
             removeClass(AdMobPlugin.spinner, "animated");
-        }
+        }*/
     }
 };
 
-function removeClass(elem, cls) {
+/*function removeClass(elem, cls) {
     var str;
     do {
         str = " " + elem.className + " ";
@@ -226,4 +226,4 @@ function removeClass(elem, cls) {
 
 function addClass(elem, cls) {
     elem.className += (" " + cls);
-}
+}*/

@@ -32,8 +32,8 @@ require(['root/config'],function(Config){
 	    paths: dynamic_paths
 	});
 
-	require(['jquery', 'underscore', 'core/addons-internal', 'core/app-utils', 'core/app', 'core/router', 'core/region-manager', 'core/stats', 'core/phonegap/utils','core/lib/hooks'],
-			function ($, _, Addons, Utils, App, Router, RegionManager, Stats, PhoneGap, Hooks) {
+	require(['jquery', 'underscore', 'core/addons-internal', 'core/app-utils', 'core/app', 'core/router', 'core/region-manager', 'core/stats', 'core/phonegap/utils','core/lib/hooks','core/admob'],
+			function ($, _, Addons, Utils, App, Router, RegionManager, Stats, PhoneGap, Hooks, AdMobPlugin) {
 
 			var launch = function() {
 				
@@ -113,6 +113,8 @@ require(['root/config'],function(Config){
 																	}
 
 																	PhoneGap.hideSplashScreen();
+																	AdMobPlugin.initialize();
+																	AdMobPlugin.requestInterstitial(true);
 																});
 															},
 															function( error ){
