@@ -16,6 +16,14 @@ module.exports = [
       "window.admob",
       "window.tappx"
     ]
+  },
+  {
+    "id": "cordova-plugin-customurlscheme.LaunchMyApp",
+    "file": "plugins/cordova-plugin-customurlscheme/www/android/LaunchMyApp.js",
+    "pluginId": "cordova-plugin-customurlscheme",
+    "clobbers": [
+      "window.plugins.launchmyapp"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -25,7 +33,8 @@ module.exports.metadata =
   "cordova-google-play-services": "25.0.0",
   "phonegap-admob": "4.1.15",
   "cordova-plugin-crosswalk-webview": "2.3.0",
-  "cordova-build-architecture": "1.0.1"
+  "cordova-build-architecture": "1.0.1",
+  "cordova-plugin-customurlscheme": "4.2.0"
 };
 // BOTTOM OF METADATA
 });

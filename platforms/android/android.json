@@ -47,6 +47,10 @@
             {
               "xml": "<preference default=\"arm\" name=\"buildArchitecture\" />",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"LaunchMyApp\"><param name=\"android-package\" value=\"nl.xservices.plugins.LaunchMyApp\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -76,6 +80,16 @@
               "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
               "count": 1
             }
+          ],
+          "/manifest/application/activity": [
+            {
+              "xml": "<intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.BROWSABLE\" /><data android:scheme=\"crtrApp\" /></intent-filter>",
+              "count": 1
+            },
+            {
+              "xml": "<intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.BROWSABLE\" /><data android:host=\" \" android:pathPrefix=\"/\" android:scheme=\" \" /></intent-filter>",
+              "count": 1
+            }
           ]
         }
       }
@@ -101,6 +115,13 @@
     },
     "cordova-build-architecture": {
       "PACKAGE_NAME": "hn.criterio.app"
+    },
+    "cordova-plugin-customurlscheme": {
+      "URL_SCHEME": "crtrApp",
+      "ANDROID_SCHEME": " ",
+      "ANDROID_HOST": " ",
+      "ANDROID_PATHPREFIX": "/",
+      "PACKAGE_NAME": "hn.criterio.app"
     }
   },
   "dependent_plugins": {},
@@ -121,6 +142,14 @@
         "window.admob",
         "window.tappx"
       ]
+    },
+    {
+      "id": "cordova-plugin-customurlscheme.LaunchMyApp",
+      "file": "plugins/cordova-plugin-customurlscheme/www/android/LaunchMyApp.js",
+      "pluginId": "cordova-plugin-customurlscheme",
+      "clobbers": [
+        "window.plugins.launchmyapp"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -128,6 +157,7 @@
     "cordova-google-play-services": "25.0.0",
     "phonegap-admob": "4.1.15",
     "cordova-plugin-crosswalk-webview": "2.3.0",
-    "cordova-build-architecture": "1.0.1"
+    "cordova-build-architecture": "1.0.1",
+    "cordova-plugin-customurlscheme": "4.2.0"
   }
 }

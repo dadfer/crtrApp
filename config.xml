@@ -4,9 +4,6 @@
     <description>Periódico Digital con línea abierta, no partidario, ni tendencioso por razones de clase social, religiosas, raza, culturas u otros aspectos sociológicos.</description>
     <author email="yo@davidvalladares.com" href="http://www.davidvalladares.com">David Valladares</author>
     <gap:platform name="android" />
-    <!--<preference name="buildArchitecture" value="arm" />
-    <preference name="xwalkMultipleApk" value="true" />
-    <preference name="android-build-tool" value="gradle" />-->
     <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="permissions" value="none" />
     <preference name="disallowOverscroll" value="true" />
@@ -19,9 +16,6 @@
     <plugin name="cordova-plugin-statusbar" source="npm" />
     <plugin name="cordova-plugin-crosswalk-webview" source="npm" spec="2.3.0" />
     <plugin name="cordova-build-architecture" source="git" spec="https://github.com/MBuchalik/cordova-build-architecture.git#v1.0.1" />
-    <plugin name="cordova-plugin-customurlscheme" spec="4.2.0">
-        <param name="URL_SCHEME" value="crtrApp" />
-    </plugin>
     <access origin="*" />
     <allow-intent href="*" />
     <allow-navigation href="*" />
@@ -44,4 +38,7 @@
     <gap:splash gap:platform="android" gap:qualifier="xxhdpi" src="splashscreens/splashscreen-wp-appkit-xxhdpi.9.png" />
     <gap:splash gap:platform="android" gap:qualifier="xxxhdpi" src="splashscreens/splashscreen-wp-appkit-xxxhdpi.9.png" />
     <plugin name="phonegap-admob" spec="~4.1.15" />
+    <plugin name="cordova-plugin-customurlscheme" spec="~4.2.0">
+        <variable name="URL_SCHEME" value="crtrApp" />
+    </plugin>
 </widget>

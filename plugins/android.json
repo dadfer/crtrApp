@@ -1,33 +1,40 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "phonegap-admob": {
+      "PACKAGE_NAME": "hn.criterio.app"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-crosswalk-webview": {
+      "XWALK_VERSION": "23+",
+      "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+      "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+      "XWALK_MODE": "embedded",
+      "XWALK_MULTIPLEAPK": "true",
+      "PACKAGE_NAME": "hn.criterio.app"
     },
-    "installed_plugins": {
-        "phonegap-admob": {
-            "PACKAGE_NAME": "hn.criterio.app"
-        },
-        "cordova-plugin-crosswalk-webview": {
-            "XWALK_VERSION": "23+",
-            "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
-            "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
-            "XWALK_MODE": "embedded",
-            "XWALK_MULTIPLEAPK": "true",
-            "PACKAGE_NAME": "hn.criterio.app"
-        },
-        "cordova-build-architecture": {
-            "PACKAGE_NAME": "hn.criterio.app"
-        }
+    "cordova-build-architecture": {
+      "PACKAGE_NAME": "hn.criterio.app"
     },
-    "dependent_plugins": {
-        "cordova-connectivity-monitor": {
-            "PACKAGE_NAME": "hn.criterio.app"
-        },
-        "cordova-google-play-services": {
-            "PACKAGE_NAME": "hn.criterio.app"
-        }
+    "cordova-plugin-customurlscheme": {
+      "URL_SCHEME": "crtrApp",
+      "ANDROID_SCHEME": " ",
+      "ANDROID_HOST": " ",
+      "ANDROID_PATHPREFIX": "/",
+      "PACKAGE_NAME": "hn.criterio.app"
     }
+  },
+  "dependent_plugins": {
+    "cordova-connectivity-monitor": {
+      "PACKAGE_NAME": "hn.criterio.app"
+    },
+    "cordova-google-play-services": {
+      "PACKAGE_NAME": "hn.criterio.app"
+    }
+  }
 }

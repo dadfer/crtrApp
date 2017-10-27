@@ -7,6 +7,9 @@
         <param name="android-package" value="com.appfeel.cordova.admob.AdMobAds" />
     </feature>
     <preference default="arm" name="buildArchitecture" />
+    <feature name="LaunchMyApp">
+        <param name="android-package" value="nl.xservices.plugins.LaunchMyApp" />
+    </feature>
     <name>Criterio App</name>
     <description>Periódico Digital con línea abierta, no partidario, ni tendencioso por razones de clase social, religiosas, raza, culturas u otros aspectos sociológicos.</description>
     <author email="yo@davidvalladares.com" href="http://www.davidvalladares.com">David Valladares</author>
