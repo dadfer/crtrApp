@@ -11,7 +11,7 @@ define( function ( require ) {
 		app_title : 'Criterio App',
 		app_platform : 'android',
 		gmt_offset : -6,
-		debug_mode : 'on',
+		debug_mode : 'off',
 		auth_key : 'n=u[%HF(I1U0zA9OUd&Mr!m;.5t^~k~PXC=A$.pNrO.7=a*y^YINjIQtNiH-Wa,(',
 		options : {"refresh_interval":5},
 		theme_settings : [],

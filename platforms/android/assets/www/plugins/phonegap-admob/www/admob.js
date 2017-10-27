@@ -1,4 +1,4 @@
-cordova.define("cordova-admob.AdMobAds", function(require, exports, module) {
+cordova.define("phonegap-admob.AdMobAds", function(require, exports, module) {
 /*
  admob.js
  Copyright 2014 AppFeel. All rights reserved.

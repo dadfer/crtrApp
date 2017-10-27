@@ -261,7 +261,6 @@ dependencies {
     releaseCompile(project(path: "cordova-google-play-services:google-play-services_lib", configuration: "release")){
         exclude module:("CordovaLib")
     }
-    compile "com.google.android.gms:play-services-ads:+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

@@ -543,64 +543,64 @@
     NSString* str = nil;
     
     str = [options objectForKey:OPT_PUBLISHER_ID];
-    if (str && ![str isEqual:[NSNull null]] && [str length] > 0) {
+    if (str && [str length] > 0) {
         publisherId = str;
     }
     
     str = [options objectForKey:OPT_INTERSTITIAL_ADID];
-    if (str && ![str isEqual:[NSNull null]] && [str length] > 0) {
+    if (str && [str length] > 0) {
         interstitialAdId = str;
     }
     
     str = [options objectForKey:OPT_AD_SIZE];
-    if (str && ![str isEqual:[NSNull null]]) {
+    if (str) {
         adSize = [self __adSizeFromString:str];
     }
     
     str = [options objectForKey:OPT_BANNER_AT_TOP];
-    if (str && ![str isEqual:[NSNull null]]) {
+    if (str) {
         isBannerAtTop = [str boolValue];
     }
     
     str = [options objectForKey:OPT_OVERLAP];
-    if (str && ![str isEqual:[NSNull null]] ) {
+    if (str) {
         isBannerOverlap = [str boolValue];
     }
     
     str = [options objectForKey:OPT_OFFSET_STATUSBAR];
-    if (str && ![str isEqual:[NSNull null]]) {
+    if (str) {
         isOffsetStatusBar = [str boolValue];
     }
     
     str = [options objectForKey:OPT_IS_TESTING];
-    if (str && ![str isEqual:[NSNull null]]) {
+    if (str) {
         isTesting = [str boolValue];
     }
     
     NSDictionary* dict = [options objectForKey:OPT_AD_EXTRAS];
-    if (dict && ![dict isEqual:[NSNull null]]) {
+    if (dict) {
         adExtras = dict;
     }
     
     str = [options objectForKey:OPT_AUTO_SHOW_BANNER];
-    if (str && ![str isEqual:[NSNull null]]) {
+    if (str) {
         isBannerAutoShow = [str boolValue];
     }
     
     str = [options objectForKey:OPT_AUTO_SHOW_INTERSTITIAL];
-    if (str && ![str isEqual:[NSNull null]]) {
+    if (str) {
         isInterstitialAutoShow = [str boolValue];
     }
     
     str = [options objectForKey:OPT_TAPPX_ID_IOS];
-    if (str && ![str isEqual:[NSNull null]]) {
+    if (str) {
         tappxId = str;
         hasTappx = true;
         tappxShare = 0.5;
     }
     
     str = [options objectForKey:OPT_TAPPX_SHARE];
-    if (str && ![str isEqual:[NSNull null]]) {
+    if (str) {
         tappxShare = [str doubleValue];
         hasTappx = true;
     }

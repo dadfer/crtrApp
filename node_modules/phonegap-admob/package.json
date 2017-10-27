@@ -1,16 +1,16 @@
 {
-  "_from": "cordova-admob",
-  "_id": "cordova-admob@4.1.16",
+  "_from": "phonegap-admob",
+  "_id": "phonegap-admob@4.1.15",
   "_inBundle": false,
-  "_integrity": "sha1-osHZUWUY0VdmBSTLnVVJo+4EbZc=",
-  "_location": "/cordova-admob",
+  "_integrity": "sha1-ZuxCgr3mw9hSOIweHN+9ZHtAqlY=",
+  "_location": "/phonegap-admob",
   "_phantomChildren": {},
   "_requested": {
     "type": "tag",
     "registry": true,
-    "raw": "cordova-admob",
-    "name": "cordova-admob",
-    "escapedName": "cordova-admob",
+    "raw": "phonegap-admob",
+    "name": "phonegap-admob",
+    "escapedName": "phonegap-admob",
     "rawSpec": "",
     "saveSpec": null,
     "fetchSpec": "latest"
@@ -19,9 +19,9 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-admob/-/cordova-admob-4.1.16.tgz",
-  "_shasum": "a2c1d9516518d157660524cb9d5549a3ee046d97",
-  "_spec": "cordova-admob",
+  "_resolved": "https://registry.npmjs.org/phonegap-admob/-/phonegap-admob-4.1.15.tgz",
+  "_shasum": "66ec4282bde6c3d852388c1e1cdfbd647b40aa56",
+  "_spec": "phonegap-admob",
   "_where": "c:\\wamp\\www\\crtrApp",
   "author": {
     "name": "AppFeel"
@@ -31,18 +31,18 @@
   },
   "bundleDependencies": false,
   "cordova": {
-    "id": "cordova-admob",
+    "id": "phonegap-admob",
     "platforms": [
       "android",
       "ios"
     ]
   },
   "deprecated": false,
-  "description": "Google AdMob Ads plugin for Cordova, Phonegap, Ionic/Angular and Intel XDK. Monetize your app with one javascript line. Android SDK v7.5, iOS SDK v7.3.1. With support for tappx and auto-detect internet connection.",
+  "description": "Google AdMob Ads plugin for Phonegap-Build. Monetize your app with one javascript line. Android SDK v7.5, iOS SDK v7.3.1. With support for tappx and auto-detect internet connection.",
   "engines": [
     {
       "name": "cordova",
-      "version": ">=4.0.0"
+      "version": ">=3.0.0"
     }
   ],
   "homepage": "https://github.com/appfeel/admob-google-cordova#readme",
@@ -69,10 +69,10 @@
     "cordova-ios"
   ],
   "license": "MIT",
-  "name": "cordova-admob",
+  "name": "phonegap-admob",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/appfeel/admob-google-cordova.git"
+    "url": "git+https://github.com/appfeel/phonegap-admob.git"
   },
-  "version": "4.1.16"
+  "version": "4.1.15"
 }

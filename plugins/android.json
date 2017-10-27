@@ -75,12 +75,12 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "hn.criterio.app"
     },
-    "cordova-admob": {
+    "phonegap-admob": {
       "PACKAGE_NAME": "hn.criterio.app"
     }
   },
   "dependent_plugins": {
-    "cordova-plugin-admob-free": {
+    "cordova-connectivity-monitor": {
       "PACKAGE_NAME": "hn.criterio.app"
     },
     "cordova-plugin-compat": {
@@ -90,9 +90,6 @@
       "PACKAGE_NAME": "hn.criterio.app"
     },
     "cordova-google-play-services": {
-      "PACKAGE_NAME": "hn.criterio.app"
-    },
-    "cordova-connectivity-monitor": {
       "PACKAGE_NAME": "hn.criterio.app"
     }
   }

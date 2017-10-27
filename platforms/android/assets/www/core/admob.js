@@ -24,7 +24,7 @@
  SOFTWARE.
  */
 
-var app = {
+var AdMobPlugin = {
     // global vars
     autoShowInterstitial: false,
     progressDialog: document.getElementById("progressDialog"),
@@ -41,7 +41,7 @@ var app = {
         if ((/(ipad|iphone|ipod|android)/i.test(navigator.userAgent))) {
             document.addEventListener('deviceready', this.onDeviceReady, false);
         } else {
-            app.onDeviceReady();
+            AdMobPlugin.onDeviceReady();
         }
     },
     // Must be called when deviceready is fired so AdMobAds plugin will be ready
@@ -99,37 +99,37 @@ var app = {
     // The scope of 'this' is the event.
     // -----------------------------------
     onOrientationChange: function () {
-        app.onResize();
+        AdMobPlugin.onResize();
     },
     onDeviceReady: function () {
         var weinre,
             weinreUrl;
 
-        document.removeEventListener('deviceready', app.onDeviceReady, false);
+        document.removeEventListener('deviceready', AdMobPlugin.onDeviceReady, false);
 
-        if (app.weinre.enabled) {
+        if (AdMobPlugin.weinre.enabled) {
             console.log('Loading weinre...');
             weinre = document.createElement('script');
-            weinreUrl = app.weinre.ip + ":" + app.weinre.port;
+            weinreUrl = AdMobPlugin.weinre.ip + ":" + AdMobPlugin.weinre.port;
             weinreUrl += '/target/target-script-min.js';
-            weinreUrl += '#' + app.weinre.targetApp;
+            weinreUrl += '#' + AdMobPlugin.weinre.targetApp;
             weinre.setAttribute('src', weinreUrl);
             document.head.appendChild(weinre);
         }
 
         if (window.admob) {
             console.log('Binding ad events...');
-            app.bindAdEvents();
+            AdMobPlugin.bindAdEvents();
             console.log('Initializing ads...');
-            app.initAds();
+            AdMobPlugin.initAds();
         } else {
             alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
     },
     onAdLoaded: function (e) {
-        app.showProgress(false);
+        AdMobPlugin.showProgress(false);
         if (window.admob && e.adType === window.admob.AD_TYPE.INTERSTITIAL) {
-            if (app.autoShowInterstitial) {
+            if (AdMobPlugin.autoShowInterstitial) {
                 window.admob.showInterstitialAd();
             } else {
                 alert("Interstitial is available. Click on 'Show Interstitial' to show it.");
@@ -137,7 +137,7 @@ var app = {
         }
     },
     onAdFailedToLoad: function (e) {
-        app.showProgress(false);
+        AdMobPlugin.showProgress(false);
         alert("Could not load ad: " + JSON.stringify(e));
     },
     onResize: function () {
@@ -150,7 +150,7 @@ var app = {
     // -----------------------------------
     startBannerAds: function () {
         if (window.admob) {
-            app.showProgress(true);
+            AdMobPlugin.showProgress(true);
             window.admob.createBannerView(function () { }, function (e) {
                 alert(JSON.stringify(e));
             });
@@ -160,7 +160,7 @@ var app = {
     },
     removeBannerAds: function () {
         if (window.admob) {
-            app.showProgress(false);
+            AdMobPlugin.showProgress(false);
             window.admob.destroyBannerView();
         } else {
             alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
@@ -168,7 +168,7 @@ var app = {
     },
     showBannerAds: function () {
         if (window.admob) {
-            app.showProgress(false);
+            AdMobPlugin.showProgress(false);
             window.admob.showBannerAd(true, function () { }, function (e) {
                 alert(JSON.stringify(e));
             });
@@ -178,7 +178,7 @@ var app = {
     },
     hideBannerAds: function () {
         if (window.admob) {
-            app.showProgress(false);
+            AdMobPlugin.showProgress(false);
             window.admob.showBannerAd(false);
         } else {
             alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
@@ -186,8 +186,8 @@ var app = {
     },
     requestInterstitial: function (autoshow) {
         if (window.admob) {
-            app.showProgress(true);
-            app.autoShowInterstitial = autoshow;
+            AdMobPlugin.showProgress(true);
+            AdMobPlugin.autoShowInterstitial = autoshow;
             window.admob.requestInterstitialAd(function () { }, function (e) {
                 alert(JSON.stringify(e));
             });
@@ -197,7 +197,7 @@ var app = {
     },
     showInterstitial: function () {
         if (window.admob) {
-            app.showProgress(false);
+            AdMobPlugin.showProgress(false);
             window.admob.showInterstitialAd(function () { }, function (e) {
                 alert(JSON.stringify(e));
             });
@@ -207,11 +207,11 @@ var app = {
     },
     showProgress: function (show) {
         if (show) {
-            addClass(app.spinner, "animated");
-            removeClass(app.progressDialog, "hidden");
+            addClass(AdMobPlugin.spinner, "animated");
+            removeClass(AdMobPlugin.progressDialog, "hidden");
         } else {
-            addClass(app.progressDialog, "hidden");
-            removeClass(app.spinner, "animated");
+            addClass(AdMobPlugin.progressDialog, "hidden");
+            removeClass(AdMobPlugin.spinner, "animated");
         }
     }
 };

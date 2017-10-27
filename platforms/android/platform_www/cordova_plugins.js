@@ -1,6 +1,14 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
+    "id": "cordova-connectivity-monitor.connectivity",
+    "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
+    "pluginId": "cordova-connectivity-monitor",
+    "clobbers": [
+      "window.connectivity"
+    ]
+  },
+  {
     "id": "cordova-plugin-battery-status.battery",
     "file": "plugins/cordova-plugin-battery-status/www/battery.js",
     "pluginId": "cordova-plugin-battery-status",
@@ -519,17 +527,9 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-connectivity-monitor.connectivity",
-    "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
-    "pluginId": "cordova-connectivity-monitor",
-    "clobbers": [
-      "window.connectivity"
-    ]
-  },
-  {
-    "id": "cordova-admob.AdMobAds",
-    "file": "plugins/cordova-admob/www/admob.js",
-    "pluginId": "cordova-admob",
+    "id": "phonegap-admob.AdMobAds",
+    "file": "plugins/phonegap-admob/www/admob.js",
+    "pluginId": "phonegap-admob",
     "clobbers": [
       "window.admob",
       "window.tappx"
@@ -540,6 +540,7 @@ module.exports.metadata =
 // TOP OF METADATA
 {
   "cordova-build-architecture": "1.0.1",
+  "cordova-connectivity-monitor": "1.2.2",
   "cordova-plugin-battery-status": "1.1.2",
   "cordova-plugin-camera": "2.1.1",
   "cordova-plugin-compat": "1.2.0",
@@ -563,8 +564,7 @@ module.exports.metadata =
   "cordova-plugin-vibration": "2.1.5",
   "cordova-plugin-whitelist": "1.2.2",
   "cordova-google-play-services": "25.0.0",
-  "cordova-connectivity-monitor": "1.2.2",
-  "cordova-admob": "4.1.16"
+  "phonegap-admob": "4.1.15"
 };
 // BOTTOM OF METADATA
 });
