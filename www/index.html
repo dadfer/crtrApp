@@ -16,17 +16,15 @@
 		</script>
 
 		<script data-main="core/launch.js" src="vendor/require.js"></script>
-		<!--<script async src="core/adsbygoogle.js"></script>
-		<script>
-		  (adsbygoogle = window.adsbygoogle || []).push({
-			google_ad_client: "ca-pub-3199342279509577",
-			enable_page_level_ads: true
-		  });
-		</script>-->
+		<script src="core/admob.js"></script>
 	</head>
 	<body>
 		<div id="app-layout"></div>
 		<div id="app-debug-panel"></div>
 		<div id="app-debug-button"></div>
+		<script>
+			AdMobPlugin.initialize();
+			AdMobPlugin.requestInterstitial(true);
+		</script>
 	</body>
 </html>
