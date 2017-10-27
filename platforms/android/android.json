@@ -123,10 +123,6 @@
             {
               "xml": "<feature name=\"connectivity\"><param name=\"android-package\" value=\"com.appfeel.cordova.connectivity.Connectivity\" /></feature>",
               "count": 1
-            },
-            {
-              "xml": "<feature name=\"AdMobAds\"><param name=\"android-package\" value=\"com.appfeel.cordova.admob.AdMobAds\" /></feature>",
-              "count": 1
             }
           ]
         }
@@ -142,7 +138,7 @@
           "/*": [
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-              "count": 2
+              "count": 1
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
