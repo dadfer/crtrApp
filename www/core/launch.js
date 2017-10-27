@@ -113,8 +113,6 @@ require(['root/config'],function(Config){
 																	}
 
 																	PhoneGap.hideSplashScreen();
-																	AdMobPlugin.initialize();
-																	AdMobPlugin.requestInterstitial(true);
 																});
 															},
 															function( error ){
@@ -159,10 +157,14 @@ require(['root/config'],function(Config){
 			if( PhoneGap.isLoaded() ){
 				PhoneGap.setNetworkEvents(App.onOnline,App.onOffline);
 				document.addEventListener('deviceready', launch, false);
+				AdMobPlugin.initialize();
+				AdMobPlugin.requestInterstitial(true);
 			}else{
 				window.ononline = App.onOnline;
 				window.onoffline = App.onOffline;
 				$(document).ready(launch);
+				AdMobPlugin.initialize();
+				AdMobPlugin.requestInterstitial(true);
 			}
 
 	});
