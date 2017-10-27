@@ -3,8 +3,9 @@
     <name>Criterio App</name>
     <description>Periódico Digital con línea abierta, no partidario, ni tendencioso por razones de clase social, religiosas, raza, culturas u otros aspectos sociológicos.</description>
     <author email="yo@davidvalladares.com" href="http://www.davidvalladares.com">David Valladares</author>
-    <!--<gap:platform name="android" />
-    <preference name="buildArchitecture" value="x86" />
+    <gap:platform name="android" />
+	<gap:plugin name="phonegap-admob" source="npm" />
+    <!--<preference name="buildArchitecture" value="x86" />
     <preference name="xwalkMultipleApk" value="true" />
     <preference name="android-build-tool" value="ant" />
     <preference name="phonegap-version" value="cli-6.5.0" />
