@@ -89,10 +89,10 @@
     "cordova-plugin-file": {
       "PACKAGE_NAME": "hn.criterio.app"
     },
-    "cordova-connectivity-monitor": {
+    "cordova-google-play-services": {
       "PACKAGE_NAME": "hn.criterio.app"
     },
-    "cordova-google-play-services": {
+    "cordova-connectivity-monitor": {
       "PACKAGE_NAME": "hn.criterio.app"
     }
   }

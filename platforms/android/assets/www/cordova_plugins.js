@@ -562,9 +562,9 @@ module.exports.metadata =
   "cordova-plugin-statusbar": "2.1.3",
   "cordova-plugin-vibration": "2.1.5",
   "cordova-plugin-whitelist": "1.2.2",
+  "cordova-google-play-services": "25.0.0",
   "cordova-connectivity-monitor": "1.2.2",
-  "cordova-admob": "4.1.16",
-  "cordova-google-play-services": "25.0.0"
+  "cordova-admob": "4.1.16"
 };
 // BOTTOM OF METADATA
 });
