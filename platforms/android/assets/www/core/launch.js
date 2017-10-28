@@ -32,8 +32,8 @@ require(['root/config'],function(Config){
 	    paths: dynamic_paths
 	});
 
-	require(['jquery', 'underscore', 'core/addons-internal', 'core/app-utils', 'core/app', 'core/router', 'core/region-manager', 'core/stats', 'core/phonegap/utils','core/lib/hooks','core/admob'],
-			function ($, _, Addons, Utils, App, Router, RegionManager, Stats, PhoneGap, Hooks, AdMobPlugin) {
+	require(['jquery', 'underscore', 'core/addons-internal', 'core/app-utils', 'core/app', 'core/router', 'core/region-manager', 'core/stats', 'core/phonegap/utils','core/lib/hooks'],
+			function ($, _, Addons, Utils, App, Router, RegionManager, Stats, PhoneGap, Hooks) {
 
 			var launch = function() {
 				
@@ -157,14 +157,10 @@ require(['root/config'],function(Config){
 			if( PhoneGap.isLoaded() ){
 				PhoneGap.setNetworkEvents(App.onOnline,App.onOffline);
 				document.addEventListener('deviceready', launch, false);
-				AdMobPlugin.initialize();
-				AdMobPlugin.requestInterstitial(true);
 			}else{
 				window.ononline = App.onOnline;
 				window.onoffline = App.onOffline;
 				$(document).ready(launch);
-				AdMobPlugin.initialize();
-				AdMobPlugin.requestInterstitial(true);
 			}
 
 	});

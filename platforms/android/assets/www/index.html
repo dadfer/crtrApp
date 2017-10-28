@@ -14,12 +14,20 @@
 			    wpak_open_url = url;
 			};
 		</script>
-
+		<script src="core/admob.js"></script>
 		<script data-main="core/launch.js" src="vendor/require.js"></script>
 	</head>
 	<body>
 		<div id="app-layout"></div>
 		<div id="app-debug-panel"></div>
 		<div id="app-debug-button"></div>
+		<script>
+			document.addEventListener("deviceready", onDeviceReadyx, false);
+			function onDeviceReadyx() {
+				AdMobPlugin.initialize();
+				AdMobPlugin.requestInterstitial(true);
+				alert('hola');
+			}
+		</script>
 	</body>
 </html>
