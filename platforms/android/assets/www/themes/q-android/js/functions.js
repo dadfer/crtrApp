@@ -319,8 +319,8 @@ define([
             
             // Change app bar title (display the component label)
             // Todo: create a generic function
-            if ( $('#app-header > h1').html() != current_screen.label ) {
-                $('#app-header > h1').html(current_screen.label);
+            if ( $('.category-label').html() != current_screen.label ) {
+                $('.category-label').html(current_screen.label);
             }
             
             // Scroll position is handled in the preparation of the transition (transition_previous_screen)
@@ -335,8 +335,8 @@ define([
             
             // Change nav bar title
             // Todo: create a generic function
-            if ( $('#app-header > h1').html() != '' ) {
-                $('#app-header > h1').html('');
+            if ( $('.category-label').html() != '' ) {
+                $('.category-label').html('');
             }
 
         }

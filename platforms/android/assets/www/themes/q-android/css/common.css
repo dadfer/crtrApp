@@ -212,7 +212,7 @@ a {
  */
 
 .app-header, .panel-header {
-	background-color: #424242;
+	background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.26);
     color: #fff;
 }
@@ -576,4 +576,24 @@ a {
         opacity: 0;
         transform: scale(2.5);
     }
+}
+.app-logo {
+	background-image:url('../img/app-logo.png');
+	background-repeat: no-repeat;
+    background-size: 160px 35px;
+	width:160px;
+	height:35px;
+    margin: 10px 55px;
+}
+.category-label{
+	top: 56px;
+	z-index: 10;
+	position: relative;
+	background-color: white;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+	text-transform: uppercase;
+	color: #660000;
+	padding: 0px 5px;
+	font-family: 'Roboto Bold',sans-serif;
+	font-weight: bold;
 }

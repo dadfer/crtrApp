@@ -99,6 +99,10 @@
         },
         "cordova-google-play-services": {
             "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-customurlscheme": {
+            "URL_SCHEME": "crtrApp",
+            "PACKAGE_NAME": "hn.criterio.app"
         }
     },
     "dependent_plugins": {},
@@ -750,6 +754,7 @@
         "cordova-build-architecture": "1.0.1",
         "phonegap-admob": "4.1.15",
         "cordova-connectivity-monitor": "1.2.2",
-        "cordova-google-play-services": "25.0.0"
+        "cordova-google-play-services": "25.0.0",
+        "cordova-plugin-customurlscheme": "4.2.0"
     }
 }
