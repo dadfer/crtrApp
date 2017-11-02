@@ -53,8 +53,8 @@ var AdMobPlugin = {
                 interstitial: 'ca-app-pub-9863325511078756/6709280228'
             },
             android: {
-                banner: 'ca-app-pub-9863325511078756/9802347428',
-                interstitial: 'ca-app-pub-9863325511078756/2279080628'
+                banner: 'ca-app-pub-3199342279509577/7595109838',
+                interstitial: 'ca-app-pub-3199342279509577/4413366544'
             }
         };
         var admobid;
