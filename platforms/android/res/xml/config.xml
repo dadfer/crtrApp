@@ -51,7 +51,7 @@
     <preference name="SplashScreenDelay" value="10000" />
     <preference name="FadeSplashScreenDuration" value="300" />
     <preference name="ShowSplashScreenSpinner" value="false" />
-    <feature name="UniversalAnalytics">
-        <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
+    <feature name="GAPlugin">
+        <param name="android-package" value="com.appfeel.cordova.analytics.CPGoogleAnalytics" />
     </feature>
 </widget>

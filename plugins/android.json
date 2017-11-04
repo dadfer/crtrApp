@@ -31,7 +31,7 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "hn.criterio.app"
     },
-    "cordova-plugin-google-analytics": {
+    "cordova-plugin-analytics": {
       "PACKAGE_NAME": "hn.criterio.app"
     }
   },
