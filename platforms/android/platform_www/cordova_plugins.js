@@ -33,6 +33,14 @@ module.exports = [
       "analytics",
       "ga"
     ]
+  },
+  {
+    "id": "cordova-plugin-analytics.GAPlugin",
+    "file": "plugins/cordova-plugin-analytics/www/analytics.js",
+    "pluginId": "cordova-plugin-analytics",
+    "merges": [
+      "analytics"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -44,7 +52,8 @@ module.exports.metadata =
   "cordova-plugin-crosswalk-webview": "2.3.0",
   "cordova-build-architecture": "1.0.1",
   "cordova-plugin-customurlscheme": "4.2.0",
-  "cordova-plugin-google-analytics": "1.8.3"
+  "cordova-plugin-google-analytics": "1.8.3",
+  "cordova-plugin-analytics": "1.4.3"
 };
 // BOTTOM OF METADATA
 });

@@ -30,6 +30,9 @@
     },
     "cordova-plugin-google-analytics": {
       "PACKAGE_NAME": "hn.criterio.app"
+    },
+    "cordova-plugin-analytics": {
+      "PACKAGE_NAME": "hn.criterio.app"
     }
   },
   "dependent_plugins": {

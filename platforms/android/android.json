@@ -55,6 +55,10 @@
             {
               "xml": "<feature name=\"UniversalAnalytics\"><param name=\"android-package\" value=\"com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"GAPlugin\"><param name=\"android-package\" value=\"com.appfeel.cordova.analytics.CPGoogleAnalytics\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -64,11 +68,11 @@
           "/*": [
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-              "count": 4
+              "count": 5
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-              "count": 3
+              "count": 4
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
@@ -98,6 +102,14 @@
             },
             {
               "xml": "<service android:enabled=\"true\" android:exported=\"false\" android:name=\"com.google.android.gms.analytics.CampaignTrackingService\" />",
+              "count": 1
+            },
+            {
+              "xml": "<service android:name=\"com.google.android.gms.analytics.CampaignTrackingService\" />",
+              "count": 1
+            },
+            {
+              "xml": "<receiver android:exported=\"true\" android:name=\"com.google.android.gms.analytics.CampaignTrackingReceiver\"><intent-filter><action android:name=\"com.android.vending.INSTALL_REFERRER\" /></intent-filter></receiver>",
               "count": 1
             }
           ],
@@ -145,6 +157,9 @@
     },
     "cordova-plugin-google-analytics": {
       "PACKAGE_NAME": "hn.criterio.app"
+    },
+    "cordova-plugin-analytics": {
+      "PACKAGE_NAME": "hn.criterio.app"
     }
   },
   "dependent_plugins": {},
@@ -182,6 +197,14 @@
         "analytics",
         "ga"
       ]
+    },
+    {
+      "id": "cordova-plugin-analytics.GAPlugin",
+      "file": "plugins/cordova-plugin-analytics/www/analytics.js",
+      "pluginId": "cordova-plugin-analytics",
+      "merges": [
+        "analytics"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -191,6 +214,7 @@
     "cordova-plugin-crosswalk-webview": "2.3.0",
     "cordova-build-architecture": "1.0.1",
     "cordova-plugin-customurlscheme": "4.2.0",
-    "cordova-plugin-google-analytics": "1.8.3"
+    "cordova-plugin-google-analytics": "1.8.3",
+    "cordova-plugin-analytics": "1.4.3"
   }
 }
