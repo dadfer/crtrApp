@@ -30,8 +30,7 @@ module.exports = [
     "file": "plugins/cordova-plugin-google-analytics/www/analytics.js",
     "pluginId": "cordova-plugin-google-analytics",
     "clobbers": [
-      "analytics",
-      "ga"
+      "analytics"
     ]
   }
 ];
@@ -45,7 +44,7 @@ module.exports.metadata =
   "cordova-build-architecture": "1.0.1",
   "cordova-plugin-customurlscheme": "4.2.0",
   "cordova-plugin-whitelist": "1.3.2",
-  "cordova-plugin-google-analytics": "1.8.3"
+  "cordova-plugin-google-analytics": "0.8.0"
 };
 // BOTTOM OF METADATA
 });

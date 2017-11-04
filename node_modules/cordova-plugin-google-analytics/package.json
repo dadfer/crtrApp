@@ -1,27 +1,27 @@
 {
-  "_from": "cordova-plugin-google-analytics",
-  "_id": "cordova-plugin-google-analytics@1.8.3",
+  "_from": "cordova-plugin-google-analytics@0.8.0",
+  "_id": "cordova-plugin-google-analytics@0.8.0",
   "_inBundle": false,
-  "_integrity": "sha512-gaSMz/XKKjO4qEXlY4/JNC0Un0rK5lTWOBp41Yb+lfC7Jo5xRaUxRGHF9GHcXzYRHEETiwQEvviAj3S6Dp8TwQ==",
+  "_integrity": "sha1-Uo9MrRn2u8PUHknUGEDC7EY1XEU=",
   "_location": "/cordova-plugin-google-analytics",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "cordova-plugin-google-analytics",
+    "raw": "cordova-plugin-google-analytics@0.8.0",
     "name": "cordova-plugin-google-analytics",
     "escapedName": "cordova-plugin-google-analytics",
-    "rawSpec": "",
+    "rawSpec": "0.8.0",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "0.8.0"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-google-analytics/-/cordova-plugin-google-analytics-1.8.3.tgz",
-  "_shasum": "234b152c4874e22675fcffc9a57ac378385f6a0a",
-  "_spec": "cordova-plugin-google-analytics",
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-google-analytics/-/cordova-plugin-google-analytics-0.8.0.tgz",
+  "_shasum": "528f4cad19f6bbc3d41e49d41840c2ec46355c45",
+  "_spec": "cordova-plugin-google-analytics@0.8.0",
   "_where": "c:\\wamp\\www\\crtrApp",
   "author": {
     "name": "Dan Wilson"
@@ -57,5 +57,5 @@
     "type": "git",
     "url": "git+https://github.com/danwilson/google-analytics-plugin.git"
   },
-  "version": "1.8.3"
+  "version": "0.8.0"
 }
