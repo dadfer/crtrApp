@@ -15,6 +15,7 @@
 			};
 		</script>
 		<script src="core/admob.js"></script>
+		<script src="core/GALocalStorage.js"></script>
 		<script data-main="core/launch.js" src="vendor/require.js"></script>
 	</head>
 	<body>
@@ -26,6 +27,8 @@
 			function onDeviceReadyx() {
 				AdMobPlugin.initialize();
 				AdMobPlugin.startBannerAds();
+				ga_storage._setAccount('UA-109202877-1');
+				ga_storage._trackPageview('Portada');
 			}
 		</script>
 	</body>

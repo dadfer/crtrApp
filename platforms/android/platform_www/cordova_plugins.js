@@ -24,15 +24,6 @@ module.exports = [
     "clobbers": [
       "window.plugins.launchmyapp"
     ]
-  },
-  {
-    "id": "cordova-plugin-google-analytics.UniversalAnalytics",
-    "file": "plugins/cordova-plugin-google-analytics/www/analytics.js",
-    "pluginId": "cordova-plugin-google-analytics",
-    "clobbers": [
-      "analytics",
-      "ga"
-    ]
   }
 ];
 module.exports.metadata = 
@@ -43,8 +34,7 @@ module.exports.metadata =
   "phonegap-admob": "4.1.15",
   "cordova-plugin-crosswalk-webview": "2.3.0",
   "cordova-build-architecture": "1.0.1",
-  "cordova-plugin-customurlscheme": "4.2.0",
-  "cordova-plugin-google-analytics": "1.8.3"
+  "cordova-plugin-customurlscheme": "4.2.0"
 };
 // BOTTOM OF METADATA
 });
