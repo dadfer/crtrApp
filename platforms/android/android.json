@@ -87,6 +87,22 @@
             {
               "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
               "count": 1
+            },
+            {
+              "xml": "<receiver android:enabled=\"true\" android:name=\"com.google.android.gms.analytics.AnalyticsReceiver\"><intent-filter><action android:name=\"com.google.android.gms.analytics.ANALYTICS_DISPATCH\" /></intent-filter></receiver>",
+              "count": 1
+            },
+            {
+              "xml": "<service android:enabled=\"true\" android:exported=\"false\" android:name=\"com.google.android.gms.analytics.AnalyticsService\" />",
+              "count": 1
+            },
+            {
+              "xml": "<receiver android:enabled=\"true\" android:exported=\"true\" android:name=\"com.google.android.gms.analytics.CampaignTrackingReceiver\"><intent-filter><action android:name=\"com.android.vending.INSTALL_REFERRER\" /></intent-filter></receiver>",
+              "count": 1
+            },
+            {
+              "xml": "<service android:enabled=\"true\" android:exported=\"false\" android:name=\"com.google.android.gms.analytics.CampaignTrackingService\" />",
+              "count": 1
             }
           ],
           "/manifest/application/activity": [
@@ -170,7 +186,8 @@
       "file": "plugins/cordova-plugin-google-analytics/www/analytics.js",
       "pluginId": "cordova-plugin-google-analytics",
       "clobbers": [
-        "analytics"
+        "analytics",
+        "ga"
       ]
     }
   ],
@@ -182,6 +199,6 @@
     "cordova-build-architecture": "1.0.1",
     "cordova-plugin-customurlscheme": "4.2.0",
     "cordova-plugin-whitelist": "1.3.2",
-    "cordova-plugin-google-analytics": "0.8.0"
+    "cordova-plugin-google-analytics": "1.8.3"
   }
 }
