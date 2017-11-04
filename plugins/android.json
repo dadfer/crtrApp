@@ -28,7 +28,7 @@
       "ANDROID_PATHPREFIX": "/",
       "PACKAGE_NAME": "hn.criterio.app"
     },
-    "cordova-plugin-google-analytics": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "hn.criterio.app"
     }
   },
