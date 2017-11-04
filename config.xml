@@ -41,5 +41,4 @@
     <plugin name="cordova-plugin-customurlscheme" spec="~4.2.0">
         <variable name="URL_SCHEME" value="crtrApp" />
     </plugin>
-    <plugin name="cordova-plugin-analytics" spec="~1.4.3" />
 </widget>
