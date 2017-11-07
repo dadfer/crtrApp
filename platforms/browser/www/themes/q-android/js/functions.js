@@ -24,8 +24,9 @@ define([
     'root/config',
     'theme/js/moment.min',
     'theme/js/velocity.min',
-    'theme/js/jquery.fitvids'
-    ], function($,App,Storage,TemplateTags,Config,Moment,Velocity) {
+    'theme/js/jquery.fitvids',
+	'core/tracking'
+    ], function($,App,Storage,TemplateTags,Config,Moment,Velocity,fitVids,Tracking) {
 
     
     
@@ -69,7 +70,8 @@ define([
     // @todo: rename spinnner -> $spinner
     var spinner = '<svg class="spinner" width="66px" height="66px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="20"></circle></svg>';
 
-    
+    //Init Google Analytics
+	Tracking.init();
     
     /*
      * Filters
@@ -322,8 +324,8 @@ define([
             if ( $('.category-label').html() != current_screen.label ) {
                 $('.category-label').html(current_screen.label);
             }
-            
             // Scroll position is handled in the preparation of the transition (transition_previous_screen)
+			Tracking.update("Categoria : "+current_screen.label);
         }
 
 		/*
@@ -338,7 +340,7 @@ define([
             if ( $('.category-label').html() != '' ) {
                 $('.category-label').html('');
             }
-
+			Tracking.update("Pagina : "+current_screen.label);
         }
                         
         // Actions shared by single and page
@@ -354,7 +356,7 @@ define([
             // Display videos and make them responsive
             // We defer video loading to keep transitions smooth
             loadAndFormatVideosFor( currentScreenObject );
-
+			Tracking.update(current_screen.label);
 		}
 
 	});
@@ -501,7 +503,8 @@ define([
                     isMenuOpen=true;
                 },150);
 			}
-        });    
+        });
+		Tracking.sendEvent("Menu","Open");		
     }
 
     // @desc Close off-canvas menu
@@ -525,6 +528,7 @@ define([
                 }
             }
         });
+		Tracking.sendEvent("Menu","Close");
 	}
 
     // @desc Open or close off-canvas menu (based on isMenuOpen variable)
@@ -639,6 +643,7 @@ define([
 	function refreshTapOn(e) {
         e.preventDefault();
         showRipple = true; // Show ripple effect
+		Tracking.sendEvent("Refresh-Button","Push");
 	}
 
     // @desc Finger releases the refresh button
@@ -901,5 +906,9 @@ define([
         }
         
     }
+	window.tt = function(title) {
+		Tracking.init();
+		Tracking.update(title);
+	}
     
 });
