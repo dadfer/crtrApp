@@ -14,7 +14,6 @@
     <description>Periódico Digital con línea abierta, no partidario, ni tendencioso por razones de clase social, religiosas, raza, culturas u otros aspectos sociológicos.</description>
     <author email="yo@davidvalladares.com" href="http://www.davidvalladares.com">David Valladares</author>
     <gap:platform name="android" />
-    <access origin="*" />
     <allow-intent href="*" />
     <allow-navigation href="*" />
     <access launch-external="yes" origin="*" />
