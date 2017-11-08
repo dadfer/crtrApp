@@ -30,7 +30,11 @@ define(function(require) {
 		},
 		init : function() {
 			// Initialize analytics
-			ga('create', tracking_id, {'alwaysSendReferrer': true});
+			ga('create', tracking_id, {
+				'alwaysSendReferrer': true,
+				'storage':'none',
+				'clientId':device.uuid
+			});
 			ga('set', 'appName', 'CriterioApp');
 			ga('set', 'appId', 'hn.criterio.app');
 			ga('set', 'appVersion', '1.2');
