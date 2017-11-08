@@ -215,11 +215,7 @@ var AdMobPlugin = {
         }*/
     }
 };
-function onDeviceReadyx() {
-	AdMobPlugin.initialize();
-	AdMobPlugin.startBannerAds();
-}
-document.addEventListener("deviceready", onDeviceReadyx, false);
+
 /*function removeClass(elem, cls) {
     var str;
     do {

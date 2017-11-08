@@ -16,7 +16,7 @@
     <gap:platform name="android" />
     <allow-intent href="*" />
     <allow-navigation href="*" />
-    <access launch-external="yes" origin="*" />
+    <access origin="*" />
     <icon gap:platform="android" src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="icons/icon-wp-appkit-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="icons/icon-wp-appkit-mdpi.png" />

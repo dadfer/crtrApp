@@ -34,6 +34,9 @@ define(function(require) {
 			ga('set', 'appName', 'CriterioApp');
 			ga('set', 'appId', 'hn.criterio.app');
 			ga('set', 'appVersion', '1.2');
+			ga('set','checkProtocolTask',null);
+			ga('set','anonymizeIp',true);
+			ga('set','forceSSL',true);
 			//ga('create', tracking_id, tracking_domain);
 		}
 	};
