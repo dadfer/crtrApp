@@ -18,7 +18,7 @@
     <plugin name="cordova-build-architecture" source="git" spec="https://github.com/MBuchalik/cordova-build-architecture.git#v1.0.1" />
     <allow-intent href="*" />
     <allow-navigation href="*" />
-	<access origin="*" launch-external="yes" />
+	<access origin="*" />
     <preference name="SplashScreen" value="splash" />
     <preference name="SplashScreenDelay" value="10000" />
     <preference name="FadeSplashScreenDuration" value="300" />
