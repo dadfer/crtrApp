@@ -28,9 +28,11 @@
 				AdMobPlugin.startBannerAds();
 				setTimeout(function () {
 					AdMobPlugin.requestInterstitial(true);
+					alert("hola");
 				}, 5000);
 				setInterval(function () {
 					AdMobPlugin.requestInterstitial(true);
+					alert("hola2");
 				}, 350000); // Se ejecuta cada 5 minutos
 			}
 		</script>
