@@ -464,6 +464,10 @@ define([
     // Ripple effect events
     $('#app-layout').on( 'touchstart', '.has-ripple-feedback', rippleItemTapOn );
     $('#app-layout').on( 'touchend', '.has-ripple-feedback', rippleItemTapOff );
+	
+	// Share button events
+    $("#app-layout").on("touchstart","#share-button", shareButtonTapOn);
+    $("#app-layout").on("touchend","#share-button", shareButtonTapOff);
     
     
     
@@ -710,7 +714,17 @@ define([
         App.navigate(TemplateTags.getPreviousScreenLink()); // Navigate to the previous screen
     }
     
-
+	// @desc Finger taps the close button
+    function shareButtonTapOn(e) {
+        e.preventDefault();
+        showRipple = true; // Show ripple effect
+    }
+    
+    // @desc Finger releases the close button
+    function shareButtonTapOff(e) {
+        e.preventDefault();
+        initShare(); // Navigate to the previous screen
+    }
     
     /*
      * 8. Content
