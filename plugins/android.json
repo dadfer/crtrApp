@@ -27,6 +27,9 @@
       "ANDROID_HOST": " ",
       "ANDROID_PATHPREFIX": "/",
       "PACKAGE_NAME": "hn.criterio.app"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "hn.criterio.app"
     }
   },
   "dependent_plugins": {
@@ -34,6 +37,9 @@
       "PACKAGE_NAME": "hn.criterio.app"
     },
     "cordova-google-play-services": {
+      "PACKAGE_NAME": "hn.criterio.app"
+    },
+    "es6-promise-plugin": {
       "PACKAGE_NAME": "hn.criterio.app"
     }
   }

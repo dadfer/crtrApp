@@ -1,163 +1,197 @@
 {
-  "prepare_queue": {
-    "installed": [],
-    "uninstalled": []
-  },
-  "config_munge": {
-    "files": {
-      "res/xml/config.xml": {
-        "parents": {
-          "/*": [
-            {
-              "xml": "<feature name=\"connectivity\"><param name=\"android-package\" value=\"com.appfeel.cordova.connectivity.Connectivity\" /></feature>",
-              "count": 1
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"connectivity\"><param name=\"android-package\" value=\"com.appfeel.cordova.connectivity.Connectivity\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AdMobAds\"><param name=\"android-package\" value=\"com.appfeel.cordova.admob.AdMobAds\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"webView\" value=\"org.crosswalk.engine.XWalkWebViewEngine\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"xwalkVersion\" value=\"23+\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"xwalkLiteVersion\" value=\"xwalk_core_library_canary:17+\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"xwalkCommandLine\" value=\"--disable-pull-to-refresh-effect\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"xwalkMode\" value=\"embedded\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"xwalkMultipleApk\" value=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"android-minSdkVersion\" value=\"16\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"arm\" name=\"buildArchitecture\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"LaunchMyApp\"><param name=\"android-package\" value=\"nl.xservices.plugins.LaunchMyApp\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
             },
-            {
-              "xml": "<feature name=\"AdMobAds\"><param name=\"android-package\" value=\"com.appfeel.cordova.admob.AdMobAds\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<preference name=\"webView\" value=\"org.crosswalk.engine.XWalkWebViewEngine\" />",
-              "count": 1
-            },
-            {
-              "xml": "<preference name=\"xwalkVersion\" value=\"23+\" />",
-              "count": 1
-            },
-            {
-              "xml": "<preference name=\"xwalkLiteVersion\" value=\"xwalk_core_library_canary:17+\" />",
-              "count": 1
-            },
-            {
-              "xml": "<preference name=\"xwalkCommandLine\" value=\"--disable-pull-to-refresh-effect\" />",
-              "count": 1
-            },
-            {
-              "xml": "<preference name=\"xwalkMode\" value=\"embedded\" />",
-              "count": 1
-            },
-            {
-              "xml": "<preference name=\"xwalkMultipleApk\" value=\"true\" />",
-              "count": 1
-            },
-            {
-              "xml": "<preference name=\"android-minSdkVersion\" value=\"16\" />",
-              "count": 1
-            },
-            {
-              "xml": "<preference default=\"arm\" name=\"buildArchitecture\" />",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"LaunchMyApp\"><param name=\"android-package\" value=\"nl.xservices.plugins.LaunchMyApp\" /></feature>",
-              "count": 1
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 3
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<provider android:authorities=\"${applicationId}.sharing.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"nl.xservices.plugins.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/sharing_paths\" /></provider>",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application/activity": [
+                        {
+                            "xml": "<intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.BROWSABLE\" /><data android:scheme=\"crtrApp\" /></intent-filter>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.BROWSABLE\" /><data android:host=\" \" android:pathPrefix=\"/\" android:scheme=\" \" /></intent-filter>",
+                            "count": 1
+                        }
+                    ]
+                }
             }
-          ]
         }
-      },
-      "AndroidManifest.xml": {
-        "parents": {
-          "/*": [
-            {
-              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-              "count": 3
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-              "count": 2
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
-              "count": 1
-            }
-          ],
-          "/manifest/application": [
-            {
-              "xml": "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />",
-              "count": 1
-            },
-            {
-              "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
-              "count": 1
-            }
-          ],
-          "/manifest/application/activity": [
-            {
-              "xml": "<intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.BROWSABLE\" /><data android:scheme=\"crtrApp\" /></intent-filter>",
-              "count": 1
-            },
-            {
-              "xml": "<intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.BROWSABLE\" /><data android:host=\" \" android:pathPrefix=\"/\" android:scheme=\" \" /></intent-filter>",
-              "count": 1
-            }
-          ]
+    },
+    "installed_plugins": {
+        "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-google-play-services": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "phonegap-admob": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "XWALK_VERSION": "23+",
+            "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+            "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+            "XWALK_MODE": "embedded",
+            "XWALK_MULTIPLEAPK": "true",
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-build-architecture": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-customurlscheme": {
+            "URL_SCHEME": "crtrApp",
+            "ANDROID_SCHEME": " ",
+            "ANDROID_HOST": " ",
+            "ANDROID_PATHPREFIX": "/",
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "hn.criterio.app"
         }
-      }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-connectivity-monitor.connectivity",
+            "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
+            "pluginId": "cordova-connectivity-monitor",
+            "clobbers": [
+                "window.connectivity"
+            ]
+        },
+        {
+            "id": "phonegap-admob.AdMobAds",
+            "file": "plugins/phonegap-admob/www/admob.js",
+            "pluginId": "phonegap-admob",
+            "clobbers": [
+                "window.admob",
+                "window.tappx"
+            ]
+        },
+        {
+            "id": "cordova-plugin-customurlscheme.LaunchMyApp",
+            "file": "plugins/cordova-plugin-customurlscheme/www/android/LaunchMyApp.js",
+            "pluginId": "cordova-plugin-customurlscheme",
+            "clobbers": [
+                "window.plugins.launchmyapp"
+            ]
+        },
+        {
+            "id": "es6-promise-plugin.Promise",
+            "file": "plugins/es6-promise-plugin/www/promise.js",
+            "pluginId": "es6-promise-plugin",
+            "runs": true
+        },
+        {
+            "id": "cordova-plugin-x-socialsharing.SocialSharing",
+            "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+            "pluginId": "cordova-plugin-x-socialsharing",
+            "clobbers": [
+                "window.plugins.socialsharing"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-connectivity-monitor": "1.2.2",
+        "cordova-google-play-services": "25.0.0",
+        "phonegap-admob": "4.1.15",
+        "cordova-plugin-crosswalk-webview": "2.3.0",
+        "cordova-build-architecture": "1.0.1",
+        "cordova-plugin-customurlscheme": "4.2.0",
+        "es6-promise-plugin": "4.1.0",
+        "cordova-plugin-x-socialsharing": "5.2.1"
     }
-  },
-  "installed_plugins": {
-    "cordova-connectivity-monitor": {
-      "PACKAGE_NAME": "hn.criterio.app"
-    },
-    "cordova-google-play-services": {
-      "PACKAGE_NAME": "hn.criterio.app"
-    },
-    "phonegap-admob": {
-      "PACKAGE_NAME": "hn.criterio.app"
-    },
-    "cordova-plugin-crosswalk-webview": {
-      "XWALK_VERSION": "23+",
-      "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
-      "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
-      "XWALK_MODE": "embedded",
-      "XWALK_MULTIPLEAPK": "true",
-      "PACKAGE_NAME": "hn.criterio.app"
-    },
-    "cordova-build-architecture": {
-      "PACKAGE_NAME": "hn.criterio.app"
-    },
-    "cordova-plugin-customurlscheme": {
-      "URL_SCHEME": "crtrApp",
-      "ANDROID_SCHEME": " ",
-      "ANDROID_HOST": " ",
-      "ANDROID_PATHPREFIX": "/",
-      "PACKAGE_NAME": "hn.criterio.app"
-    }
-  },
-  "dependent_plugins": {},
-  "modules": [
-    {
-      "id": "cordova-connectivity-monitor.connectivity",
-      "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
-      "pluginId": "cordova-connectivity-monitor",
-      "clobbers": [
-        "window.connectivity"
-      ]
-    },
-    {
-      "id": "phonegap-admob.AdMobAds",
-      "file": "plugins/phonegap-admob/www/admob.js",
-      "pluginId": "phonegap-admob",
-      "clobbers": [
-        "window.admob",
-        "window.tappx"
-      ]
-    },
-    {
-      "id": "cordova-plugin-customurlscheme.LaunchMyApp",
-      "file": "plugins/cordova-plugin-customurlscheme/www/android/LaunchMyApp.js",
-      "pluginId": "cordova-plugin-customurlscheme",
-      "clobbers": [
-        "window.plugins.launchmyapp"
-      ]
-    }
-  ],
-  "plugin_metadata": {
-    "cordova-connectivity-monitor": "1.2.2",
-    "cordova-google-play-services": "25.0.0",
-    "phonegap-admob": "4.1.15",
-    "cordova-plugin-crosswalk-webview": "2.3.0",
-    "cordova-build-architecture": "1.0.1",
-    "cordova-plugin-customurlscheme": "4.2.0"
-  }
 }

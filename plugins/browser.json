@@ -74,6 +74,9 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "hn.criterio.app"
         },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
         "phonegap-admob": {
             "PACKAGE_NAME": "hn.criterio.app"
         }
@@ -89,6 +92,9 @@
             "PACKAGE_NAME": "hn.criterio.app"
         },
         "cordova-plugin-file": {
+            "PACKAGE_NAME": "hn.criterio.app"
+        },
+        "es6-promise-plugin": {
             "PACKAGE_NAME": "hn.criterio.app"
         }
     }

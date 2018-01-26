@@ -27,6 +27,7 @@
     <gap:splash gap:platform="android" gap:qualifier="xhdpi" src="splashscreens/splashscreen-wp-appkit-xhdpi.9.png" />
     <gap:splash gap:platform="android" gap:qualifier="xxhdpi" src="splashscreens/splashscreen-wp-appkit-xxhdpi.9.png" />
     <gap:splash gap:platform="android" gap:qualifier="xxxhdpi" src="splashscreens/splashscreen-wp-appkit-xxxhdpi.9.png" />
+    <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
     <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="permissions" value="none" />
     <preference name="disallowOverscroll" value="true" />

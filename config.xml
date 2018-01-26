@@ -18,7 +18,7 @@
     <plugin name="cordova-build-architecture" source="git" spec="https://github.com/MBuchalik/cordova-build-architecture.git#v1.0.1" />
     <allow-intent href="*" />
     <allow-navigation href="*" />
-	<access origin="*" />
+    <access origin="*" />
     <preference name="SplashScreen" value="splash" />
     <preference name="SplashScreenDelay" value="10000" />
     <preference name="FadeSplashScreenDuration" value="300" />
@@ -41,4 +41,6 @@
     <plugin name="cordova-plugin-customurlscheme" spec="~4.2.0">
         <variable name="URL_SCHEME" value="crtrApp" />
     </plugin>
+    <plugin name="cordova-plugin-x-socialsharing" spec="~5.2.1" />
+	<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
 </widget>

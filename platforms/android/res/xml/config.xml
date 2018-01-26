@@ -10,6 +10,9 @@
     <feature name="LaunchMyApp">
         <param name="android-package" value="nl.xservices.plugins.LaunchMyApp" />
     </feature>
+    <feature name="SocialSharing">
+        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+    </feature>
     <name>Criterio App</name>
     <description>Periódico Digital con línea abierta, no partidario, ni tendencioso por razones de clase social, religiosas, raza, culturas u otros aspectos sociológicos.</description>
     <author email="yo@davidvalladares.com" href="http://www.davidvalladares.com">David Valladares</author>
@@ -31,6 +34,7 @@
     <gap:splash gap:platform="android" gap:qualifier="xhdpi" src="splashscreens/splashscreen-wp-appkit-xhdpi.9.png" />
     <gap:splash gap:platform="android" gap:qualifier="xxhdpi" src="splashscreens/splashscreen-wp-appkit-xxhdpi.9.png" />
     <gap:splash gap:platform="android" gap:qualifier="xxxhdpi" src="splashscreens/splashscreen-wp-appkit-xxxhdpi.9.png" />
+    <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="webView" value="org.crosswalk.engine.XWalkWebViewEngine" />
     <preference name="xwalkVersion" value="23+" />

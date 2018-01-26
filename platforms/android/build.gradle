@@ -261,6 +261,7 @@ dependencies {
     releaseCompile(project(path: "cordova-google-play-services:google-play-services_lib", configuration: "release")){
         exclude module:("CordovaLib")
     }
+    compile "com.android.support:support-v4:24.1.1+"
     // SUB-PROJECT DEPENDENCIES END
 }
 
