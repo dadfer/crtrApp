@@ -97,7 +97,10 @@ define([
                 var diffDays = momentNow.diff(momentPostDate, 'days');
                 
                 var customPostDate;
-
+				
+				//Colocamos con esto la fecha en Español
+				momentPostDate.locale('es'); 
+				
                 if (diffDays == 0) { // Duration is less than a day (eg. 8 hours ago)
                     customPostDate = momentPostDate.fromNow();
                 } else { // Duration is more than a day (eg. March 3rd 2014)
@@ -280,7 +283,7 @@ define([
          * @todo messages should be centralized to ease translations
          */
 		if ( result.ok ) {
-			showMessage("Content updated successfully");
+			showMessage("Contenido actualizado con éxito");
 		}else{
 			showMessage(result.message);
 		}
@@ -724,6 +727,7 @@ define([
     function shareButtonTapOff(e) {
         e.preventDefault();
         initShare(); // Navigate to the previous screen
+		Tracking.sendEvent("Share Button","Push");
     }
     
     /*
