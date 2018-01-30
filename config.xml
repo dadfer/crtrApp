@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="hn.criterio.app" version="1.2.1" versionCode="101" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="hn.criterio.app" version="1.2.1" versionCode="121" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Criterio App</name>
     <description>Periódico Digital con línea abierta, no partidario, ni tendencioso por razones de clase social, religiosas, raza, culturas u otros aspectos sociológicos.</description>
     <author email="yo@davidvalladares.com" href="http://www.davidvalladares.com">David Valladares</author>
