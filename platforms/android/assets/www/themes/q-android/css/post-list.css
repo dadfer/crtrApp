@@ -82,3 +82,48 @@
 .get-more-button .spinner .path {
     stroke: #fff;
 }
+
+/*
+ * Search
+*/
+.search-container {
+    padding: 10px 5px 10px 5px;
+    text-align: center;
+	display: none;
+}
+.search-field {
+    width: 75%;
+	height: 30px;
+	line-height: 20px;
+	font-size: 16px;
+	margin-right: 10px;
+	padding: 2px;
+	border: 0;
+	border-bottom: 1px solid;
+}
+.search-icon {
+    position: relative;
+	right: 0px;
+	top: 0px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 28px;
+	height: 28px;
+	background-image: url('../img/search-icon.svg');
+	background-size: 24px 24px;
+	margin: 4px 0px 4px 0px;
+	float: right;    
+}
+.close-icon {
+    position: relative;
+	right: 0px;
+	top: 0px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 28px;
+	height: 28px;
+	background-image: url('../img/close-icon.svg');
+	background-size: 24px 24px;
+	margin: 4px 0px 4px 0px;
+	float: right;
+}
