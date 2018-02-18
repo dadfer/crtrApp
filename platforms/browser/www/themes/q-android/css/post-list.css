@@ -102,28 +102,26 @@
 	border-bottom: 1px solid;
 }
 .search-icon {
-    position: relative;
-	right: 0px;
+    position: absolute;
+	right: 48px;
 	top: 0px;
 	background-repeat: no-repeat;
 	background-position: center;
-	width: 28px;
-	height: 28px;
+	width: 48px;
+	height: 48px;
 	background-image: url('../img/search-icon.svg');
 	background-size: 24px 24px;
-	margin: 4px 0px 4px 0px;
-	float: right;    
+	margin: 4px 0px 4px 0px; 
 }
 .close-icon {
-    position: relative;
+    position: absolute;
 	right: 0px;
 	top: 0px;
 	background-repeat: no-repeat;
 	background-position: center;
-	width: 28px;
-	height: 28px;
+	width: 48px;
+	height: 48px;
 	background-image: url('../img/close-icon.svg');
 	background-size: 24px 24px;
 	margin: 4px 0px 4px 0px;
-	float: right;
 }

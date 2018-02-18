@@ -471,6 +471,14 @@ define([
 	// Share button events
     $("#app-layout").on("touchstart","#share-button", shareButtonTapOn);
     $("#app-layout").on("touchend","#share-button", shareButtonTapOff);
+	
+	// Open Search button events
+    $("#app-layout").on("touchstart","#open-search", openSearchButtonTapOn);
+    $("#app-layout").on("touchend","#open-search", openSearchButtonTapOff);
+	
+	// Close Search button events
+    $("#app-layout").on("touchstart","#close-search", closeSearchButtonTapOn);
+    $("#app-layout").on("touchend","#close-search", closeSearchButtonTapOff);
     
     
     
@@ -717,17 +725,46 @@ define([
         App.navigate(TemplateTags.getPreviousScreenLink()); // Navigate to the previous screen
     }
     
-	// @desc Finger taps the close button
+	// @desc Finger taps the share button
     function shareButtonTapOn(e) {
         e.preventDefault();
         showRipple = true; // Show ripple effect
     }
     
-    // @desc Finger releases the close button
+    // @desc Finger releases the share button
     function shareButtonTapOff(e) {
         e.preventDefault();
         initShare(); // Navigate to the previous screen
 		Tracking.sendEvent("Share Button","Push");
+    }
+	// @desc Finger taps the open search button
+    function openSearchButtonTapOn(e) {
+        e.preventDefault();
+        showRipple = true; // Show ripple effect
+    }
+    
+    // @desc Finger releases the open search button
+    function openSearchButtonTapOff(e) {
+        e.preventDefault();
+        $("#main-menu").fadeOut();  			// Hide
+		$("#search-container").fadeIn("slow");  	// Show
+		$("#search-field").focus();
+		Tracking.sendEvent("Open Search Button","Push");
+    }
+	
+	// @desc Finger taps the close search button
+    function closeSearchButtonTapOn(e) {
+        e.preventDefault();
+        showRipple = true; // Show ripple effect
+    }
+    
+    // @desc Finger releases the close search button
+    function closeSearchButtonTapOff(e) {
+        e.preventDefault();
+        $("#search-container").fadeOut();  			// Hide
+		$('#search-field').val('');
+		$("#main-menu").fadeIn();  	// Show
+		Tracking.sendEvent("Close Search Button","Push");
     }
     
     /*
@@ -928,5 +965,66 @@ define([
 		Tracking.init();
 		Tracking.update(title);
 	}
-    
+	
+	/* FUNCION DE BUSQUEDA */
+	/**
+	 * Memorize current search so that it is always available,
+	 * even after changing screen
+	 */
+	var current_search = {
+		search_string: ''
+	};
+	
+    $('#app-layout').on("click", "#search", function(e){
+		e.preventDefault();
+		showRipple = true; // Show ripple effect
+		
+		showMessage("Buscando... Favor espere.",false);
+		//Set search params from HTML form:
+		current_search.search_string = $('#search-field').val().trim();
+		
+		//Get updated data from server for the current component:
+		App.refreshComponent({
+			success: function( answer, update_results ){
+				hideMessage();
+				//Server answered with a filtered list of posts. 
+				//Reload current screen to see the result:
+				App.reloadCurrentScreen();
+				showMessage("Mostrando Resultados");
+			},
+			error: function( error ){
+				//Maybe do something if filtering went wrong.
+				//Note that "No network" error events are triggered automatically by core
+				hideMessage();
+				showMessage("Ocurrio un error");
+			}
+		});
+	});
+	
+	/**
+	 * Add our search params to web services that retrieve our post list.
+	 * Applies to "Live Query" web service (that retrieves filtered component's post list)
+	 * and to "Get More Posts" web service (so that search filters apply to pagination too).
+	 */
+	App.filter('web-service-params', function(web_service_params){
+		//If the user provided non empty search params:
+		if(current_search.search_string !== ''){
+			//Add search params to the data sent to web service:
+			web_service_params.my_search_filters = current_search;
+			//Those params will be retrieved with WpakWebServiceContext::getClientAppParam( 'my_search_filters' )
+			//on server side.
+		}
+		return web_service_params;
+	});
+	
+	/**
+	 * Add 
+	 * - current search params to the archive template, so that they're available in archive.html.
+	 */
+	App.filter('template-args', function(template_args, view_type, view_template){
+		if (view_type === 'archive'){
+			template_args.current_search = current_search;
+		}
+		return template_args;
+	});
 });
