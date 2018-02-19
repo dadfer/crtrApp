@@ -41,7 +41,7 @@
             <%= post.content %>
 
 	</div>
-    
+    <a href="<%= TemplateTags.getCommentsLink(post.id)%>">Comentarios</a>
 </div>
 <script>
 	function initShare() {
