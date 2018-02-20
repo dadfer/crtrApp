@@ -26,7 +26,7 @@
 
     </div>
 
-    <% if(  post.thumbnail && post.thumbnail.src && post.thumbnail.src.length ){ %>
+    <% if( post.thumbnail && post.thumbnail.src && post.thumbnail.src.length){ %>
 
         <img class="post-thumbnail" src="<%= post.thumbnail.src %>" onerror="displayDefaultImage(this);" />
         
@@ -41,7 +41,11 @@
             <%= post.content %>
 
 	</div>
-    <a href="<%= TemplateTags.getCommentsLink(post.id)%>">Comentarios</a>
+    <div class="view-comments">
+		<section>
+			<button id="js-trigger-overlay" type="button" data-post-id="<%= post.id %>">Ver Comentarios</button>
+		</section>
+	</div>
 </div>
 <script>
 	function initShare() {

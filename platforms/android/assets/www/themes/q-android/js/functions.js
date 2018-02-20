@@ -746,9 +746,10 @@ define([
     // @desc Finger releases the open search button
     function openSearchButtonTapOff(e) {
         e.preventDefault();
-        $("#main-menu").fadeOut();  			// Hide
-		$("#search-container").fadeIn("slow");  	// Show
-		$("#search-field").focus();
+        $("#main-menu").fadeOut(400, function() {
+			$("#search-container").fadeIn("slow");  	// Show
+			$("#search-field").focus();
+		}); 
 		Tracking.sendEvent("Open Search Button","Push");
     }
 	
@@ -761,9 +762,10 @@ define([
     // @desc Finger releases the close search button
     function closeSearchButtonTapOff(e) {
         e.preventDefault();
-        $("#search-container").fadeOut();  			// Hide
-		$('#search-field').val('');
-		$("#main-menu").fadeIn();  	// Show
+        $("#search-container").fadeOut(400, function(){
+			$('#search-field').val('');
+			$("#main-menu").fadeIn();
+		});
 		Tracking.sendEvent("Close Search Button","Push");
     }
     
@@ -1000,6 +1002,27 @@ define([
 			}
 		});
 	});
+	
+	$( "#app-layout" ).on("click", "#js-trigger-overlay", function( e ) {
+		e.preventDefault();
+			
+		$(this).text("Cargando...");
+			
+		App.displayPostComments( 
+			$(this).attr( 'data-post-id' ),
+			function( comments, post, item_global ) {
+				//Do something when comments display is ok
+				//We hide the waiting panel in 'screen:showed' to avoid flickering, because 
+				//at this point, comments are retrieved but not rendered
+			},
+			function( error ){
+				//Do something when comments display fail 
+				//(note that an app error is triggered automatically)
+				showMessage("Error de Carga. Intente de Nuevo");
+			}
+		);
+		$(this).text("Ver Comentarios");
+	} );
 	
 	/**
 	 * Add our search params to web services that retrieve our post list.
