@@ -2,15 +2,20 @@ Comments on <a href="<%= TemplateTags.getPostLink(post.id) %>"><%= post.title %>
 <% if(comments.length){ %>
       <ul class="media-list">
             <% _.each( comments, function( comment ){ %>
-                  <li style="padding-left:<% print((comment.depth)*2) %>em">
-                        <h4>
-                              <%= comment.author %>&nbsp;
-                              <small><%= TemplateTags.formatDate(comment.date,'d/m/Y') %></small>
-                        </h4>
+                  <li style="margin-left:<% print((comment.depth)*1) %>em">
+                        <div class="comment-header">
+							<div class="imagen"></div>
+                            <span><%= comment.author %></span><br>
+                            <small><%= TemplateTags.formatDate(comment.date,'d/m/Y') %></small>
+                        </div>
                         <p><%= comment.content %></p>
                   </li>
             <% }) %>
       </ul>
 <% }else{ %>
-      <p>No comment!</p>
+     <ul class="media-list">
+		<li>
+			<p>No hay comentarios para esta publicaci&oacute;n</p>
+		</li>
+	 </ul>
 <% } %>

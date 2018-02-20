@@ -1006,7 +1006,7 @@ define([
 	$( "#app-layout" ).on("click", "#js-trigger-overlay", function( e ) {
 		e.preventDefault();
 			
-		$(this).text("Cargando...");
+		showMessage("Cargando Mensajes");
 			
 		App.displayPostComments( 
 			$(this).attr( 'data-post-id' ),
@@ -1021,7 +1021,6 @@ define([
 				showMessage("Error de Carga. Intente de Nuevo");
 			}
 		);
-		$(this).text("Ver Comentarios");
 	} );
 	
 	/**
