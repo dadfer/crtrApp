@@ -642,3 +642,8 @@ a {
 .media-list small{
 	margin-left: 5px;
 }
+.comments-headind{
+	text-align: center;
+	font-weight: bold;
+	margin-top: 10px;
+}
