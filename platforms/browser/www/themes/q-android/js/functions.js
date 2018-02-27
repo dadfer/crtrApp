@@ -977,7 +977,7 @@ define([
 		search_string: ''
 	};
 	
-    $('#app-layout').on("click", "#search", function(e){
+    $('#app-layout').on("submit", "#search-form", function(e){
 		e.preventDefault();
 		showRipple = true; // Show ripple effect
 		
@@ -1021,6 +1021,16 @@ define([
 				showMessage("Error de Carga. Intente de Nuevo");
 			}
 		);
+	} );
+	
+	$( "#app-layout" ).on("click", "#make-comment", function( e ) {
+		e.preventDefault();
+		var url = 'https://criterio.hn/?p='+$(this).attr( 'data-post-id' )+'#comments';
+		console.log(url);
+		var q = confirm("Para hacer un comentario se redigira al sitio web");
+		if(q == true){
+			document.location.href = url;
+		}
 	} );
 	
 	/**

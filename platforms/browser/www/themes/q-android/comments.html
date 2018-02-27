@@ -1,5 +1,8 @@
-<div class="comments-headind"><%= post.nb_comments %> comentarios sobre</div> 
-<a href="<%= TemplateTags.getPostLink(post.id) %>"><%= post.title %></a></li>
+<div class="comments-headind">
+	<%= post.nb_comments %> comentarios sobre<br>
+	<a href="<%= TemplateTags.getPostLink(post.id) %>"><%= post.title %></a></li>
+</div> 
+
 <% if(comments.length){ %>
       <ul class="media-list">
             <% _.each( comments, function( comment ){ %>
@@ -20,4 +23,8 @@
 		</li>
 	 </ul>
 <% } %>
-<!--<small class="comments-headind"><a href="https://criterio.hn/?p=<%= post.id %>#comments">Pulsa aqui</a> para comentar</div>-->
+<!--<div class="view-comments">
+	<section>
+		<button id="make-comment" type="button" data-post-id="44085">Comentar</button>
+	</section>
+</div>-->

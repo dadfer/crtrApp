@@ -7,7 +7,7 @@ define( function ( require ) {
 		wp_ws_url : 'http://criterio.hn/wp-appkit-api/criterion-v-1-0',
 		wp_url : 'http://criterio.hn',
 		theme : 'q-android',
-		version : '1.2.1',
+		version : '1.3',
 		app_title : 'Criterio App',
 		app_platform : 'android',
 		gmt_offset : -6,
